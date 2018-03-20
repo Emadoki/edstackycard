@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EdStackyCard">
+        <attr name="esc_displayAmount" format="integer"/>
+        <attr name="esc_animationDuration" format="integer"/>
+        <attr name="esc_infiniteLoop" format="boolean"/>
+    </declare-styleable>
+</resources>
