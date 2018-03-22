@@ -337,17 +337,9 @@ public class EdStackyCard extends ViewGroup
                     if (interactListener != null)
                         interactListener.dismiss(child, (Integer) child.getTag());
                 }
-                else if (drag.length() < 60)
-                {
-                    cardTransformer.transformAdd(child, 1f, getChildCount() - 1);
-                    if (interactListener != null)
-                        interactListener.click(child, (Integer) child.getTag());
-                }
                 else
                 {
-                    float factor = 0.2f / config.displayAmount;
-                    float scale = (getChildCount() - 1) * factor;
-                    float y = child.getMeasuredHeight() / config.displayAmount * scale;
+                    float y = child.getMeasuredHeight() / config.displayAmount * 0.2f;
                     child.animate().translationX(0).translationY(y).setDuration(config.animationDuration).start();
                 }
                 break;
@@ -370,7 +362,6 @@ public class EdStackyCard extends ViewGroup
 
     public interface OnInteractListener
     {
-        void click(View view, int position);
         void dismiss(View view, int position);
     }
 }

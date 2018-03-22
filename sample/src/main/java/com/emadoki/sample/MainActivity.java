@@ -47,12 +47,6 @@ public class MainActivity extends AppCompatActivity
         edStackyCard.setOnInteractListener(new EdStackyCard.OnInteractListener()
         {
             @Override
-            public void click(View view, int position)
-            {
-                txtStatus.setText("click " + position);
-            }
-
-            @Override
             public void dismiss(View view, int position)
             {
                 txtStatus.setText("dismiss " + position);
